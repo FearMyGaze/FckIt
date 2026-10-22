@@ -1,0 +1,9 @@
+btop powertop iotop nvtop intel-gpu-tools intel-gpu-top vulkaninfo
+preload earlyoom zram-generator
+noto-fonts noto-fonts-emoji ttf-jetbrains-mono ttf-fira-code ttf-nerd-fonts-symbols
+docker docker-compose lazygit github-cli
+stow
+brightnessctl pamixer playerctl grim slurp wf-recorder wl-clipboard
+hypridle hyprlock hyprpicker hyprsunset uwsm kitty
+firefox
+qt6ct

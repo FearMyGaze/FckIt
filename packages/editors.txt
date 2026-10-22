@@ -1,0 +1,3 @@
+emacs git ripgrep fd
+# Zed: curl -f https://zed.dev/install.sh | sh
+# Doom Emacs: git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs && ~/.config/emacs/bin/doom install

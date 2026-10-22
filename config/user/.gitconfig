@@ -1,0 +1,89 @@
+[user]
+    name = Giorgos
+    email = giorgos@example.com
+
+[core]
+    editor = zed --wait
+    pager = delta
+    autocrlf = input
+    safecrlf = true
+    excludesfile = ~/.gitignore_global
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = true
+    ff = only
+
+[push]
+    default = current
+    autoSetupRemote = true
+
+[fetch]
+    prune = true
+
+[merge]
+    tool = delta
+    conflictstyle = zdiff3
+
+[diff]
+    tool = delta
+    colorMoved = default
+
+[delta]
+    navigate = true
+    light = false
+    side-by-side = true
+    line-numbers = true
+
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    cm = commit
+    ca = commit --amend
+    can = commit --amend --no-edit
+    ps = push
+    pl = pull
+    f = fetch
+    lg = log --oneline --graph --decorate --all
+    lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
+    df = diff
+    dfs = diff --staged
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    aliases = config --get-regexp ^alias\\.
+    branches = branch -a
+    tags = tag -l
+
+[color]
+    ui = auto
+    branch = auto
+    diff = auto
+    status = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[commit]
+    gpgsign = false
+
+[tag]
+    sort = v:refname
+
+[rebase]
+    autosquash = true

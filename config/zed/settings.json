@@ -1,0 +1,39 @@
+{
+  "theme": "Catppuccin Mocha",
+  "font_size": 14,
+  "font_family": "JetBrains Mono",
+  "vim_mode": true,
+  "tab_size": 2,
+  "hard_tabs": false,
+  "line_height": 1.5,
+  "cursor_blink": true,
+  "relative_line_numbers": true,
+  "show_whitespaces": "selection",
+  "show_invisibles": false,
+  "auto_save": "on_focus_change",
+  "format_on_save": "on",
+  "language_models": {
+    "enabled": true
+  },
+  "lsp": {
+    "enabled": true,
+    "show_completions_on_input": true,
+    "inlay_hints": {
+      "enabled": true,
+      "show_type_hints": true,
+      "show_parameter_hints": true
+    }
+  },
+  "terminal": {
+    "font_family": "JetBrains Mono",
+    "font_size": 13,
+    "shell": "zsh"
+  },
+  "features": {
+    "copilot": false,
+    "edit_prediction": true
+  },
+  "keybindings": {
+    "leader": "space"
+  }
+}

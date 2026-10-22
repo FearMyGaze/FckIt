@@ -1,0 +1,9 @@
+# fstrim service for SSD
+# /etc/systemd/system/fstrim.service
+
+[Unit]
+Description=Discard unused blocks on SSD
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/fstrim -av

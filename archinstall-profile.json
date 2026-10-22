@@ -1,0 +1,80 @@
+{
+  "version": "2.6",
+  "disk_config": {
+    "device": "/dev/nvme0n1",
+    "partitioning": {
+      "type": "partition",
+      "partitions": [
+        {
+          "mountpoint": "/boot",
+          "size": "512MiB",
+          "filesystem": "fat32",
+          "flags": ["esp"]
+        },
+        {
+          "mountpoint": "/",
+          "size": "remaining",
+          "filesystem": "ext4"
+        }
+      ]
+    }
+  },
+  "bootloader": "none",
+  "hostname": "t480s",
+  "locale": {
+    "system": "en_US.UTF-8",
+    "keyboard": "us"
+  },
+  "timezone": "Europe/Athens",
+  "packages": [
+    "base",
+    "linux",
+    "linux-firmware",
+    "intel-ucode",
+    "networkmanager",
+    "sudo",
+    "git",
+    "base-devel",
+    "vim",
+    "man-db",
+    "man-pages",
+    "texinfo",
+    "zsh",
+    "pipewire",
+    "wireplumber",
+    "pipewire-pulse",
+    "pipewire-alsa",
+    "pipewire-jack",
+    "bluez",
+    "bluez-utils",
+    "power-profiles-daemon",
+    "thermald",
+    "tlp",
+    "xdg-desktop-portal",
+    "xdg-desktop-portal-hyprland",
+    "xdg-desktop-portal-gtk",
+    "polkit-gnome",
+    "gnome-keyring",
+    "libsecret"
+  ],
+  "users": {
+    "giorgos": {
+      "password": "",
+      "groups": ["wheel", "video", "docker", "seat"],
+      "shell": "/bin/zsh"
+    }
+  },
+  "services": [
+    "NetworkManager",
+    "bluetooth",
+    "power-profiles-daemon",
+    "thermald",
+    "tlp"
+  ],
+  "profile": {
+    "graphical": false,
+    "no_ntp": false,
+    "swap": false
+  },
+  "post_install": "echo 'Run ~/FckIt/bootstrap-post-archinstall.sh after first boot'"
+}

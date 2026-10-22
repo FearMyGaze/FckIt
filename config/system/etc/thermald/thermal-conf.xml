@@ -1,0 +1,57 @@
+# thermald configuration for ThinkPad T480s
+# /etc/thermald/thermal-conf.xml
+
+<?xml version="1.0"?>
+<ThermalConfiguration>
+    <Platform>
+        <Name>ThinkPad T480s</Name>
+        <ProductName>*T480s*</ProductName>
+        <Preference>QUIET</Preference>
+        <ThermalSensors>
+            <ThermalSensor>
+                <Type>CPU_TEMP</Type>
+                <Path>/sys/class/thermal/thermal_zone0/temp</Path>
+                <AsyncCapable>1</AsyncCapable>
+            </ThermalSensor>
+            <ThermalSensor>
+                <Type>CPU_TEMP</Type>
+                <Path>/sys/class/thermal/thermal_zone1/temp</Path>
+                <AsyncCapable>1</AsyncCapable>
+            </ThermalSensor>
+        </ThermalSensors>
+        <ThermalZones>
+            <ThermalZone>
+                <Type>cpu</Type>
+                <TripPoints>
+                    <TripPoint>
+                        <Type>PASSIVE</Type>
+                        <Temperature>75000</Temperature>
+                        <ControlType>THROTTLING</ControlType>
+                    </TripPoint>
+                    <TripPoint>
+                        <Type>ACTIVE</Type>
+                        <Temperature>65000</Temperature>
+                        <ControlType>FAN</ControlType>
+                    </TripPoint>
+                    <TripPoint>
+                        <Type>CRITICAL</Type>
+                        <Temperature>95000</Temperature>
+                        <ControlType>SHUTDOWN</ControlType>
+                    </TripPoint>
+                </TripPoints>
+            </ThermalZone>
+        </ThermalZones>
+        <CoolingDevices>
+            <CoolingDevice>
+                <Type>FAN</Type>
+                <Path>/proc/acpi/ibm/fan</Path>
+                <MaxState>7</MaxState>
+            </CoolingDevice>
+            <CoolingDevice>
+                <Type>THROTTLING</Type>
+                <Path>/sys/devices/system/cpu/cpu0/cpufreq/scaling_driver</Path>
+                <MaxState>10</MaxState>
+            </CoolingDevice>
+        </CoolingDevices>
+    </Platform>
+</ThermalConfiguration>

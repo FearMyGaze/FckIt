@@ -1,0 +1,13 @@
+# fstrim timer for SSD
+# /etc/systemd/system/fstrim.timer
+
+[Unit]
+Description=Discard unused blocks on SSD (weekly)
+
+[Timer]
+OnCalendar=weekly
+RandomizedDelaySec=1h
+Persistent=true
+
+[Install]
+WantedBy=timers.target

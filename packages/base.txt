@@ -1,0 +1,7 @@
+base-devel git yay-bin networkmanager pipewire wireplumber pipewire-pulse pipewire-alsa pipewire-jack
+bluez bluez-utils power-profiles-daemon thermald tlp
+xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
+polkit-gnome gnome-keyring libsecret
+linux linux-headers linux-firmware intel-ucode
+sudo vim nano htop curl wget unzip zip p7zip
+man-db man-pages texinfo

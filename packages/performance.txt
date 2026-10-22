@@ -1,0 +1,4 @@
+btop powertop iotop nvtop intel-gpu-tools intel-gpu-top
+preload earlyoom zram-generator thermald tlp power-profiles-daemon
+sysstat linux-perf i7z
+cpupower

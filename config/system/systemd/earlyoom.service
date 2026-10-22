@@ -1,0 +1,12 @@
+[Unit]
+Description=Early OOM Daemon
+After=network.target
+
+[Service]
+Type=notify
+ExecStart=/usr/bin/earlyoom -m 1024 -r 30 -p emacs -p firefox -p zed -p kitty -p hyprland -p quickshell -p Xwayland
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
